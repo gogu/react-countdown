@@ -1,0 +1,25 @@
+{
+  "name": "react-countdown",
+  "version": "0.0.0",
+  "authors": [
+    "gogu <gogu9909@gmail.com>"
+  ],
+  "description": "A React component.",
+  "main": "react-countdown.js",
+  "keywords": [
+    "react",
+    "component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.13.1"
+  }
+}
+
