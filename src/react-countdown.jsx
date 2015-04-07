@@ -1,3 +1,5 @@
+var React = require('react');
+
 var Countdown = React.createClass({
   getInitialState: function() {
     return {
@@ -6,7 +8,9 @@ var Countdown = React.createClass({
   },
   componentDidUpdate: function() {
     var runningTime = this.state.runningTime;
-    if (!runningTime) clearTimeout(this.timer);
+
+    if (!runningTime) return clearTimeout(this.timer);
+
     runningTime--;
     this.timer = setTimeout(function() {
       this.setState({runningTime: runningTime});
@@ -25,15 +29,10 @@ var Countdown = React.createClass({
     return (
       <button onClick={this.handleClick}>{text}</button>
     );
+  },
+  _onStopCount: function() {
+    this.state.runningTime = 0;
   }
 });
 
-React.render(
-  <Countdown time="30" tpl="重新发送 (?time)" placeholder="获取验证码" />,
-  document.getElementById('countdown')
-);
-
-React.render(
-  <Countdown time="30" tpl="重新发送 (?time)" placeholder="获取验证码" />,
-  document.getElementById('countdown2')
-);
+module.exports = Countdown;

@@ -1,0 +1,41 @@
+{
+  "name": "react-countdown",
+  "version": "0.0.0",
+  "description": "Countdown component by react.",
+  "main": "index.js",
+  "scripts": {
+    "start": "watchify demo/demo.jsx -o demo/demo.js --verbose --debug",
+    "build-demo": "browserify demo/demo.jsx > demo/demo.js",
+    "test": "test"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gogu/react-countdown.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "time",
+    "countdown"
+  ],
+  "author": "gogu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gogu/react-countdown/issues"
+  },
+  "homepage": "https://github.com/gogu/react-countdown",
+  "devDependencies": {
+    "browserify": "^9.0.7",
+    "reactify": "^1.1.0",
+    "watchify": "^3.1.0"
+  },
+  "dependencies": {
+    "flux": "^2.0.1",
+    "react": "^0.13.1"
+  }
+}
