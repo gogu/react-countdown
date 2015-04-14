@@ -1,4 +1,6 @@
-var Countdown = React.createClass({displayName: "Countdown",
+var React = require('react');
+
+var CountdownNormal = React.createClass({
   getInitialState: function() {
     return {
       runningTime: 0
@@ -23,18 +25,9 @@ var Countdown = React.createClass({displayName: "Countdown",
                this.props.tpl.replace(/\?time/, this.state.runningTime)
              : this.props.placeholder;
     return (
-      React.createElement("button", {onClick: this.handleClick}, text)
+      <button onClick={this.handleClick}>{text}</button>
     );
   }
 });
 
-React.render(
-  React.createElement(Countdown, {time: "30", tpl: "重新发送 (?time)", placeholder: "获取验证码"}),
-  document.getElementById('countdown')
-);
-
-React.render(
-  React.createElement(Countdown, {time: "30", tpl: "重新发送 (?time)", placeholder: "获取验证码"}),
-  document.getElementById('countdown2')
-);
-
+module.exports = CountdownNormal;

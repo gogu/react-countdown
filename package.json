@@ -1,0 +1,34 @@
+{
+  "name": "react-countdown",
+  "version": "0.0.0",
+  "description": "A countdown component written by react.",
+  "main": "index.js",
+  "scripts": {
+    "build-global": "rm -rf build/global && NODE_ENV=production webpack modules/index.js build/global/react-countdown.js && NODE_ENV=product COMPRESS=1 webpack modules/index.js build/global/react-countdown.min.js && echo \"gzipped, the global build is `gzip -c build/global/react-countdown.min.js | wc -c` bytes\"",
+    "demo": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gogu/react-countdown.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "countdown",
+    "time"
+  ],
+  "author": "gogu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gogu/react-countdown/issues"
+  },
+  "homepage": "https://github.com/gogu/react-countdown",
+  "devDependencies": {
+    "jsx-loader": "^0.13.1",
+    "webpack": "^1.8.0"
+  },
+  "peerDependencies": {
+    "react": "^0.13.1"
+  }
+}

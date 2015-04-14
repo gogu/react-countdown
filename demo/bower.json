@@ -1,0 +1,14 @@
+{
+  "name": "react-countdown-demo",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gogu/react-countdown",
+  "authors": [
+    "gogu <gogu9909@gmail.com>"
+  ],
+  "description": "Demo.",
+  "main": "demo.html",
+  "license": "MIT",
+  "dependencies": {
+    "react": "~0.13.1"
+  }
+}
