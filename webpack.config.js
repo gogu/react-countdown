@@ -18,11 +18,16 @@ if (process.env.COMPRESS) {
 
 module.exports = {
   output: {
-    libraryTarget: 'var',
+    libraryTarget: 'umd',
     library: 'ReactCountdown'
   },
   externals: {
-    'react': 'window.React'
+    'react': {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    }
   },
   module: {
     loaders: [

@@ -1,5 +1,14 @@
-var ReactCountdown =
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("react"));
+	else if(typeof define === 'function' && define.amd)
+		define(["react"], factory);
+	else if(typeof exports === 'object')
+		exports["ReactCountdown"] = factory(require("react"));
+	else
+		root["ReactCountdown"] = factory(root["React"]);
+})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 
@@ -91,7 +100,9 @@ var ReactCountdown =
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = window.React;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
 
 /***/ }
-/******/ ]);
+/******/ ])
+});
+;

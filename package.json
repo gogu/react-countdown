@@ -4,7 +4,7 @@
   "description": "A countdown component written by react.",
   "main": "index.js",
   "scripts": {
-    "build-global": "rm -rf build/global && NODE_ENV=production webpack modules/index.js build/global/react-countdown.js && NODE_ENV=product COMPRESS=1 webpack modules/index.js build/global/react-countdown.min.js && echo \"gzipped, the global build is `gzip -c build/global/react-countdown.min.js | wc -c` bytes\"",
+    "build-umd": "rm -rf build/umd && NODE_ENV=production webpack modules/index.js build/umd/react-countdown.js && NODE_ENV=product COMPRESS=1 webpack modules/index.js build/umd/react-countdown.min.js && echo \"gzipped, the umd build is `gzip -c build/umd/react-countdown.min.js | wc -c` bytes\"",
     "demo": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
